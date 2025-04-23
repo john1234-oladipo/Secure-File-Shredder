@@ -46,15 +46,12 @@ optional arguments:
 
 Shred a single file with default settings (3 passes):
 
-```bash
 python secure_shredder.py sensitive.docx
 Shred multiple files with 7 passes and verbose output:
 
-```bash
 python secure_shredder.py -p 7 -v file1.txt file2.csv
 Shred a directory recursively:
 
-```bash
 python secure_shredder.py -r /path/to/directory
 
 ## Security Notes
@@ -71,7 +68,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 MIT
-
 
 ## Key Features
 
