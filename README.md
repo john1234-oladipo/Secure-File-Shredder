@@ -26,42 +26,44 @@ When you delete a file normally, the data remains on disk until overwritten. Thi
    ```bash
    git clone https://github.com/yourusername/secure-file-shredder.git
    cd secure-file-shredder
-
+   ```
 ## Usage
-usage: secure_shredder.py [-h] [-p PASSES] [-r] [-v] paths [paths ...]
-
-Secure File Shredder - Permanently delete files to prevent recovery
-
-positional arguments:
-  paths                 Files or directories to shred
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -p PASSES, --passes PASSES
-                        Number of overwrite passes (default: 3)
-  -r, --recursive       Recursively shred directories
-  -v, --verbose         Show detailed progress
+   ```bash
+   usage: secure_shredder.py [-h] [-p PASSES] [-r] [-v] paths [paths ...]
+   
+   Secure File Shredder - Permanently delete files to prevent recovery
+   
+   positional arguments:
+     paths                 Files or directories to shred
+   
+   optional arguments:
+     -h, --help            show this help message and exit
+     -p PASSES, --passes PASSES
+                           Number of overwrite passes (default: 3)
+     -r, --recursive       Recursively shred directories
+     -v, --verbose         Show detailed progress
+   ```
 
 ## Examples
 
-Shred a single file with default settings (3 passes):
-
-python secure_shredder.py sensitive.docx
-Shred multiple files with 7 passes and verbose output:
-
-python secure_shredder.py -p 7 -v file1.txt file2.csv
-Shred a directory recursively:
-
-python secure_shredder.py -r /path/to/directory
+1.   Shred a single file with default settings (3 passes):
+   ```bash
+      python secure_shredder.py sensitive.docx
+   ```
+2.   Shred multiple files with 7 passes and verbose output:
+   ```bash
+     python secure_shredder.py -p 7 -v file1.txt file2.csv
+   ```
+3.   Shred a directory recursively:
+   ```bash
+      python secure_shredder.py -r /path/to/directory
+   ```
 
 ## Security Notes
-The default 3-pass overwrite is sufficient for most users
-
-For maximum security, use 7+ passes (especially for highly sensitive data)
-
-This tool cannot securely delete files on SSD drives with wear-leveling
-
-Always test on non-critical files first
+   The default 3-pass overwrite is sufficient for most users
+   For maximum security, use 7+ passes (especially for highly sensitive data)
+   This tool cannot securely delete files on SSD drives with wear-leveling
+   Always test on non-critical files first
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
