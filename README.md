@@ -61,8 +61,11 @@ When you delete a file normally, the data remains on disk until overwritten. Thi
 
 ## Security Notes
    The default 3-pass overwrite is sufficient for most users
+   
    For maximum security, use 7+ passes (especially for highly sensitive data)
+   
    This tool cannot securely delete files on SSD drives with wear-leveling
+   
    Always test on non-critical files first
 
 ## Contributing
